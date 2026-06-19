@@ -8,6 +8,7 @@ Tambien pueden editar el Archivo Readme y poner los resultados dentro de sus pro
 https://github.com/ExBattou/SimpsonsApp
 
 Errores del repositorio SimpsonsApp
+
 1- Error en configuración del JDK(no compila): En el archivo gradle.properties se define org.gradle.java.home con una ruta local. Esto esta mal porque esa ruta solo existe en una computadora específica. Si otra persona clona el proyecto o lo abre desde otra PC, Gradle no va a encontrar ese JDK y la compilación puede fallar. Lo correcto sería no dejar esa ruta fija en el proyecto y configurar el JDK desde Android Studio o en la configuracion local de cada usuario.
 
 2- Error en Episode.kt: En el archivo Episode.kt hay un init con un return Episode que no corresponde que este, ese codigo esta fuera de lugar. El archivo deberia quedar solo como una data class con los datos del episodio.
